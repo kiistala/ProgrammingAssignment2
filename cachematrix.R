@@ -24,7 +24,7 @@ makeCacheMatrix <- function(x = matrix())
   
   get <- function() x
 
-  setc <- function(solve) c <<- solve
+  setc <- function(z) c <<- z
   
   getc <- function() c
   
