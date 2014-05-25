@@ -1,7 +1,8 @@
-## Put comments here that give an overall description of what your
-## functions do
+## This file has two functions that help save 
+## computer time by caching the result of solve() function
 
-## Write a short comment describing this function
+## This function creates a special function that has 
+## many functions inside it
 
 makeCacheMatrix <- function(x = matrix())
 {
@@ -24,11 +25,13 @@ makeCacheMatrix <- function(x = matrix())
 }
 
 
-## This 
+## This function uses the cached inverse matrix
+## if there is one
+## If there is not, it puts a cached matrix into
+## the special variable
 
 cacheSolve <- function(x)
 {
-   ## Return a matrix that is the inverse of 'x'
    c <- x$getc()
 
    if(!is.null(c))
