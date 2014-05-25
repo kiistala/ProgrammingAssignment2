@@ -1,6 +1,14 @@
 ## This file has two functions that help save 
 ## computer time by caching the result of solve() function
 
+## Usage example:
+##
+## r <- matrix(1:4,2,2)
+## s <- makeCacheMatrix(r)
+## cacheSolve(s) # first time: no cache
+## cacheSolve(s) # second time: reads from cache
+
+
 ## This function creates a special function that has 
 ## many functions inside it
 
