@@ -14,6 +14,7 @@
 
 makeCacheMatrix <- function(x = matrix())
 {
+  # c is the cached matrix
   c <- NULL
 
   set <- function(y) {
@@ -35,6 +36,7 @@ makeCacheMatrix <- function(x = matrix())
 
 ## This function uses the cached inverse matrix
 ## if there is one
+## 
 ## If there is not, it puts a cached matrix into
 ## the special variable
 
@@ -44,10 +46,12 @@ cacheSolve <- function(x)
 
    if(!is.null(c))
    {
+     # when a cached matrix is found:
      message("getting cached data")
      return(c)
    }
    
+   # when a cached matrix is not found:   
    data <- x$get()
    c <- solve(data)
    x$setc(c)
